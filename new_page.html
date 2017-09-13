@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+              <meta charset = "UTF-8">
+        
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+              <link type = "text/css" rel = "stylesheet" href = "new_page.css">
+        
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+              <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    
+              <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+              <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
+    
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+              <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+        
+              <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        
+        <style type="text/css">
+    .box{
+       display: none;
+      }
+    
+   
+</style>
+        
+    </head>
+    
+    <body>
+
+        <div class="row" style="min-height:300px;margin-left:1%;margin-top:3%;">
+    <div  class="col-sm-6">
+
+
+        <div class="col-xs-3">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tabs-left">
+                <li><a href="#home" data-toggle="tab" style = "border:transparent">Basics</a></li>
+                <li><a href="#profile" data-toggle="tab" style = "border:transparent">Billing</a></li>
+                <li><a href="#messages" data-toggle="tab" style = "border:transparent">Messages</a></li>
+                <li><a href="#settings" data-toggle="tab" style = "border:transparent">Settings</a></li>
+            </ul>
+        </div></div>
+        <div class="col-xs-9">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                
+                <div class = "container-fluid">
+                    <div class = "row" style = "margin-top:-18%;margin-left:16%;">
+                    <div class = "col-md-4">
+                        <h5 style = "color:lightgrey">Set information about yourself</h5>
+                        <img src="data:image/png;base64,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" style = "width:50%">
+                        </div>
+                    <div class = "col-md-8">
+                        
+                        
+<div class="container">
+  <form class="form-inline" action="/action_page.php">
+    <div class="form-group">
+      <label for="pwd" style = "color:cadetblue;">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="pwd" style = "background-color:aliceblue;">
+    </div>
+    <div class="form-group" style = "margin-left:1%;">
+      <label for="email" style = "color:cadetblue;">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" style = "background-color:aliceblue;">
+    </div>
+
+      
+  </form>
+      <form class="form-inline" action="/action_page.php" style = "margin-top:1%;">
+    <div class="form-group">
+      <label for="pwd" style = "color:cadetblue;">Country:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Country name" name="Cnm" style = "background-color:aliceblue;">
+    </div>
+    <div class="form-group" style = "margin-left:1%;">
+      <label for="email" style = "color:cadetblue;">Phone no.:</label>
+      <input type="number" class="form-control" id="email" placeholder="Enter Phone no." name="phno" style = "background-color:aliceblue;">
+    </div>
+  </form>
+    
+    
+     <form class="form" action="/action_page.php" style = "margin-top:1%">
+    <div class="form-group">
+      <label for="pwd" style = "color:cadetblue;">Compnay Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Compnay Name" name="Cmpn" style = "width:48%;background-color:aliceblue">
+    </div>
+    <div class="form-group">
+      <label for="email" style = "color:cadetblue;">Designation:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter Designation" name="desg" style = "width:48%;background-color:aliceblue">
+    </div>
+  </form>
+</div> 
+</div>       
+</div>
+ </div>
+ </div>
+                
+                
+                <div class="tab-pane" id="profile" style = "margin-left:22%;margin-top:5%;">
+                <div class = "row">
+                    <div class = "col-md-6">
+                        <label><input type = "radio" class = "class=gf-plan-selector" name = "colorRadio" value = "red">Free Plan</label>
+<!--                        <h5 style = "display:inline;color:darkgreen">Free Plan</h5>-->
+                        <p style = "color:cornflowerblue;font-size:1.2rem;margin-top:2%">Just getting started with Drift? This is the plan for you.</p>
+                <div class = "red box" style = "display:grid;display:none;font-size:1.3rem;font-stretch: extra-condensed;font-style: italic;">     
+                    <p style = "color:grey; margin-top:3%;">This plan includes…</p>
+                        <div class = "row">
+                        <div class = "col-md-6">
+                            <p>Live chat (online & offline)</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Email fallback</p>
+                            </div>
+                        </div>
+                         <div class = "row">
+                        <div class = "col-md-6">
+                            <p>iOS & Android mobile app</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Drift Profile</p>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-6">
+                              <p>Slack Integration</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>                   
+                    
+                    <div class = "col-md-6 red box" style = "">
+                     
+                        <ul class="list-group" style = "border:1px dotted mediumvioletred">
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:1px dotted mediumvioletred;border-left:none;border-right:none;border-top:none">
+      <h3 style = "font-weight:bolder;color:black">Your Plan</h3>
+  </li>
+  <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:1px dotted mediumvioletred;border-left:none;border-right:none;border-top:none">
+    Monthly Plans
+    <span class="badge badge-default badge-pill">Free</span>
+  </li>
+  <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+    Seats
+    <span class="badge badge-default badge-pill">1</span>
+  </li>
+  <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+    Contact limit
+    <span class="badge badge-default badge-pill">100</span>
+  </li>
+     <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      <a href="" class="btn btn-secondary btn active" role="button" aria-pressed="true" style = "background-color:aliceblue;
+    width: -webkit-fill-available;
+    text-align: left;
+    text-align: -webkit-left;">Auto pay Total
+                                   <p style = "text-align: right;margin-top: -6%;">$0.00</p>
+                                   </a>
+                            
+                    </li>
+</ul>
+                    </div>
+                 </div>
+                    
+                             <div class = "row">
+                    <div class = "col-md-6" style = "margin-top:5%">
+                        <label><input type = "radio" class = "class=gf-plan-selector" name = "colorRadio" value = "green">Starter</label>
+<!--                        <h5 style = "display:inline;color:darkgreen">Pro Plan</h5>-->
+                        <p style = "display:inline;margin-left:50%;font-size:0.75rem;font-weight:bolder;">Starts @ $50.0</p>
+                        <p style = "color:cornflowerblue;font-size:1.2rem;margin-top:2%">For small businesses that are ready to take a step up from Free. Upgrade to send targeted messages to your website visitors...and more!</p>        
+                         <div class = "green box" style = "display:grid;display:none;font-size:1.3rem;font-stretch: extra-condensed;font-style: italic;">     
+                    <p style = "color:grey; margin-top:3%;">This plan includes…</p>
+                        <div class = "row">
+                        <div class = "col-md-6">
+                            <p>Starter Playbooks</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Targeting</p>
+                            </div>
+                        </div>
+                         <div class = "row">
+                        <div class = "col-md-6">
+                            <p>Scheduled Hours</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Enriched Data</p>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-6">
+                              <p>Saved Replies</p>
+                            </div>
+                            <div class = "col-md-6">
+                              <p>Starter Integrations</p>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                                 
+                                 
+                       <div class = "col-md-6 green box" style = "margin-top:-5rem;">
+                      <ul class="list-group" style = "border:1px dotted mediumvioletred">
+       <li class="list-group-item borderless justify-content-between" style = "border:none;font-size: 2rem;
+    font-weight: bold;text-align:center;
+}">
+             Update Your Plan
+                      
+                      </li>
+                     <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none">
+                             Plan
+                      <span style="margin-left:73%;color:black">Starter</span>
+                    </li>
+                    <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Billing Period
+                      <span class="badge badge-default badge-pill">$50/month</span>
+                    </li>
+                          <div class="btn-group" role="group" aria-label="Basic example" style= "margin-left:30%;margin-top:3%;margin-bottom:3%">
+  <button type="button" class="btn btn-secondary" style = "background-color:transparent;border-color:darkgrey;">Annualy</button>
+  <button type="button" class="btn btn-secondary" style = "background-color:transparent;border-color:darkgrey;">Monthly</button>
+</div>
+                    <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Contacts
+                      <span class="badge badge-default badge-pill">1,000</span>
+                    </li>
+                          
+                           <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Seats
+                               <p style = "font-size:0.75rem;font-weight:bolder;">$18 per additional seats</p>
+                      <span class="badge badge-default badge-pill" style = "margin-top:-10%">0</span>
+                    </li>
+                          
+
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      First Name
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                          
+                              <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Last Name
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                          Credit Card Number
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                        <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+<!--                             <span><i class = "lock"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 20 24"><path d="M17 24H3c-1.654 0-3-1.345-3-3V11c0-1.654 1.346-3 3-3h1V6c0-3.308 2.69-6 6-6s6 2.692 6 6v2h1c1.654 0 3 1.346 3 3v10c0 1.655-1.346 3-3 3zM10 2C7.794 2 6 3.794 6 6v2h8V6c0-2.206-1.794-4-4-4zm8 9a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V11zm-7 4.722V18a1 1 0 0 1-2 0v-2.278c-.595-.347-1-.985-1-1.722 0-1.103.897-2 2-2s2 .897 2 2c0 .737-.405 1.375-1 1.722z" class="cls-1"></path></svg></i></span>-->
+                               
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;font-size:1.4rem;border-left:none;border-right:none">
+                      Expiration
+                                 <p style = "margin-left: 49%;margin-top: -6%;">CVV</p>
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width:15%" placeholder="MM">
+                                <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;display:inline;width:15%" placeholder="YY">
+                                <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;display:inline;width:65%">
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Zip Code
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                           
+                               <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      <a href="" class="btn btn-secondary btn active" role="button" aria-pressed="true" style = "background-color:aliceblue;
+    width: -webkit-fill-available;
+    text-align: left;
+    text-align: -webkit-left;">Auto pay
+                                   <p style = "text-align: right;margin-top: -6%;">$60.0</p>
+                                   </a>
+                            
+                    </li>
+                               
+                        <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none;border-bottom:none">
+                      <a href="" class="btn btn-secondary btn active" role="button" aria-pressed="true" style = "background-color:aliceblue;width: -webkit-fill-available;text-align: left;text-align: -webkit-center;">Update Plan
+                                   </a>
+                            
+                    </li>
+                  </ul>
+                       </div>
+                    </div>
+                    
+                    
+                    
+                    
+                        <div class = "row">
+                    <div class = "col-md-6" style = "margin-top:5%">
+                        <label><input type = "radio" class = "class=gf-plan-selector" name = "colorRadio" value = "blue">Pro Plan</label>
+<!--                        <h5 style = "display:inline;color:darkgreen">Pro Plan</h5>-->
+                        <p style = "display:inline;margin-left:50%;font-size:0.75rem;font-weight:bolder;">Starts @ $250.0</p>
+                        <p style = "color:cornflowerblue;font-size:1.2rem;margin-top:2%">For small businesses that are ready to take a step up from Free. Upgrade to send targeted messages to your website visitors...and more!</p>        
+                         <div class = "blue box" style = "display:grid;display:none;font-size:1.3rem;font-stretch: extra-condensed;font-style: italic;">     
+                    <p style = "color:grey; margin-top:3%;">This plan includes…</p>
+                        <div class = "row">
+                        <div class = "col-md-6">
+                            <p>Dynamic Lead Routing</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>LeadBot</p>
+                            </div>
+                        </div>
+                         <div class = "row">
+                        <div class = "col-md-6">
+                            <p>SupportBot</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Live View</p>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-6">
+                              <p>Pro Integrations</p>
+                            </div>
+                            <div class = "col-md-6">
+                              <p>Dedicated Customer Success Manager</p>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                                 
+                       <div class = "col-md-6 blue box" style = "margin-top:-18.5rem;">
+                      <ul class="list-group" style = "border:1px dotted mediumvioletred">
+       <li class="list-group-item borderless justify-content-between" style = "border:none;font-size: 2rem;
+    font-weight: bold;text-align:center;
+}">
+             Update Your Plan
+                      
+                      </li>
+                     <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none">
+                             Plan
+                      <span style="margin-left:73%;color:black">Starter</span>
+                    </li>
+                    <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Billing Period
+                      <span class="badge badge-default badge-pill">$250/month</span>
+                    </li>
+                          <div class="btn-group" role="group" aria-label="Basic example" style= "margin-left:30%;margin-top:3%;margin-bottom:3%">
+  <button type="button" class="btn btn-secondary" style = "background-color:transparent;border-color:darkgrey;">Annualy</button>
+  <button type="button" class="btn btn-secondary" style = "background-color:transparent;border-color:darkgrey;">Monthly</button>
+</div>
+                    <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Contacts
+                      <span class="badge badge-default badge-pill">25,000</span>
+                    </li>
+                          
+                           <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Seats
+                               <p style = "font-size:0.75rem;font-weight:bolder;">$50 per additional seats</p>
+                      <span class="badge badge-default badge-pill" style = "margin-top:-10%">0</span>
+                    </li>
+                          
+
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      First Name
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                          
+                              <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Last Name
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                          Credit Card Number
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                        <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+<!--                             <span><i class = "lock"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 20 24"><path d="M17 24H3c-1.654 0-3-1.345-3-3V11c0-1.654 1.346-3 3-3h1V6c0-3.308 2.69-6 6-6s6 2.692 6 6v2h1c1.654 0 3 1.346 3 3v10c0 1.655-1.346 3-3 3zM10 2C7.794 2 6 3.794 6 6v2h8V6c0-2.206-1.794-4-4-4zm8 9a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V11zm-7 4.722V18a1 1 0 0 1-2 0v-2.278c-.595-.347-1-.985-1-1.722 0-1.103.897-2 2-2s2 .897 2 2c0 .737-.405 1.375-1 1.722z" class="cls-1"></path></svg></i></span>-->
+                               
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;font-size:1.4rem;border-left:none;border-right:none">
+                      Expiration
+                                 <p style = "margin-left: 49%;margin-top: -6%;">CVV</p>
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width:15%" placeholder="MM">
+                                <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;display:inline;width:15%" placeholder="YY">
+                                <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;display:inline;width:65%">
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Zip Code
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                           
+                               <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      <a href="" class="btn btn-secondary btn active" role="button" aria-pressed="true" style = "background-color:aliceblue;
+    width: -webkit-fill-available;
+    text-align: left;
+    text-align: -webkit-left;">Auto pay
+                                   <p style = "text-align: right;margin-top: -6%;">$3,000.0</p>
+                                   </a>
+                            
+                    </li>
+                               
+                        <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none;border-bottom:none">
+                      <a href="" class="btn btn-secondary btn active" role="button" aria-pressed="true" style = "background-color:aliceblue;width: -webkit-fill-available;text-align: left;text-align: -webkit-center;">Update Plan
+                                   </a>
+                            
+                    </li>
+                  </ul>
+                       </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </div>
+                
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    
+<script type="text/javascript">
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        var inputValue = $(this).attr("value");
+        var targetBox = $("." + inputValue);
+        $(".box").not(targetBox).hide();
+        $(targetBox).show();
+    });
+});
+</script>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,232 @@
+/*!
+ * bootstrap-vertical-tabs - v1.1.0
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-06-06
+ * Copyright (c) 2014 Ä°smail Demirbilek
+ * License: MIT
+ */
+.tabs-left, .tabs-right {
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border-right: 1px solid #ddd;
+}
+.tabs-right {
+  border-left: 1px solid #ddd;
+}
+.tabs-left>li, .tabs-right>li {
+  float: none;
+  margin-bottom: 2px;
+}
+.tabs-left>li {
+  margin-right: -1px;
+}
+.tabs-right>li {
+  margin-left: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.tabs-right>li.active>a,
+.tabs-right>li.active>a:hover,
+.tabs-right>li.active>a:focus {
+  border-bottom: 1px solid #ddd;
+  border-left-color: transparent;
+}
+.tabs-left>li>a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display:block;
+}
+.tabs-right>li>a {
+  border-radius: 0 4px 4px 0;
+  margin-right: 0;
+}
+.vertical-text {
+  margin-top:50px;
+  border: none;
+  position: relative;
+}
+.vertical-text>li {
+  height: 20px;
+  width: 120px;
+  margin-bottom: 100px;
+}
+.vertical-text>li>a {
+  border-bottom: 1px solid #ddd;
+  border-right-color: transparent;
+  text-align: center;
+  border-radius: 4px 4px 0px 0px;
+}
+.vertical-text>li.active>a,
+.vertical-text>li.active>a:hover,
+.vertical-text>li.active>a:focus {
+  border-bottom-color: transparent;
+  border-right-color: #ddd;
+  border-left-color: #ddd;
+}
+.vertical-text.tabs-left {
+  left: -50px;
+}
+.vertical-text.tabs-right {
+  right: -50px;
+}
+.vertical-text.tabs-right>li {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.vertical-text.tabs-left>li {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+  <div class = "row">
+                    <div class = "col-md-6">
+                       <a href= ""><input type = "radio" class = "class=gf-plan-selector" style = "display:inline"></a>
+                        <h5 style = "display:inline;color:darkgreen">Pro Plan</h5>
+                        <p style = "display:inline;margin-left:50%;font-size:0.75rem;font-weight:bolder;">Starts @ $250.0</p>
+                        <p style = "margin-top:1rem">Features:Dynamic Lead Routing,LeadBot,SupportBot...</p>
+                        </div>
+                       
+                       <div class = "col-md-6" style = "">
+                       
+                       
+                      <ul class="list-group" style = "border:1px dotted mediumvioletred">
+       <li class="list-group-item borderless justify-content-between" style = "border:none;font-size: 2rem;
+    font-weight: bold;text-align:center;
+}">
+             Update Your Plan
+                      
+                      </li>
+                     <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none">
+                             Plan
+                      <span style="margin-left:73%;color:black">Starter</span>
+                    </li>
+                    <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Billing Period
+                      <span class="badge badge-default badge-pill">$250/month</span>
+                    </li>
+                          <div class="btn-group" role="group" aria-label="Basic example" style= "margin-left:30%;margin-top:3%;margin-bottom:3%">
+  <button type="button" class="btn btn-secondary" style = "background-color:transparent;border-color:darkgrey;">Annualy</button>
+  <button type="button" class="btn btn-secondary" style = "background-color:transparent;border-color:darkgrey;">Monthly</button>
+</div>
+                    <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Contacts
+                      <span class="badge badge-default badge-pill">25,000</span>
+                    </li>
+                          
+                           <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Seats
+                               <p style = "font-size:0.75rem;font-weight:bolder;">$50 per additional seats</p>
+                      <span class="badge badge-default badge-pill" style = "margin-top:-10%">0</span>
+                    </li>
+                          
+
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      First Name
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                          
+                              <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Last Name
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                          Credit Card Number
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                        <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+<!--                             <span><i class = "lock"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 20 24"><path d="M17 24H3c-1.654 0-3-1.345-3-3V11c0-1.654 1.346-3 3-3h1V6c0-3.308 2.69-6 6-6s6 2.692 6 6v2h1c1.654 0 3 1.346 3 3v10c0 1.655-1.346 3-3 3zM10 2C7.794 2 6 3.794 6 6v2h8V6c0-2.206-1.794-4-4-4zm8 9a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V11zm-7 4.722V18a1 1 0 0 1-2 0v-2.278c-.595-.347-1-.985-1-1.722 0-1.103.897-2 2-2s2 .897 2 2c0 .737-.405 1.375-1 1.722z" class="cls-1"></path></svg></i></span>-->
+                               
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;font-size:1.4rem;border-left:none;border-right:none">
+                      Expiration
+                                 <p style = "margin-left: 49%;margin-top: -6%;">CVV</p>
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width:15%" placeholder="MM">
+                                <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;display:inline;width:15%" placeholder="YY">
+                                <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;display:inline;width:65%">
+                    </li>
+                          
+                             <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      Zip Code
+                            
+                    </li>
+                          
+                            <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border:none;">
+                      <input type = "text" maxlength = "50" style = "border: 1px solid cadetblue;width: -webkit-fill-available">
+                               
+                    </li>
+                           
+                               <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none">
+                      <a href="" class="btn btn-secondary btn active" role="button" aria-pressed="true" style = "background-color:aliceblue;
+    width: -webkit-fill-available;
+    text-align: left;
+    text-align: -webkit-left;">Auto play
+                                   <p style = "text-align: right;margin-top: -6%;">$3,000.0</p>
+                                   </a>
+                            
+                    </li>
+                               
+                        <li class="list-group-item borderless justify-content-between" style = "color:cadetblue;border-left:none;border-right:none;border-bottom:none">
+                      <a href="" class="btn btn-secondary btn active" role="button" aria-pressed="true" style = "background-color:aliceblue;width: -webkit-fill-available;text-align: left;text-align: -webkit-center;">Update Plan
+                                   </a>
+                            
+                    </li>
+                  </ul>
+                       </div>
+                    </div>*/
